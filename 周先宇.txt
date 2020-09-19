@@ -1,0 +1,21 @@
+git的简单使用
+
+1、在命令操作板上进入该文件夹：cd  路径，例：cd d:/www/github；或在该文件夹点击右键，选择Git Bash Here；
+
+2、把该文件夹变成Git可管理的本地版本库，命令：git init，文件夹下会多出一个.git隐藏文件夹，说明创建成功；
+
+3、可以查看当前仓库状态的命令：git status
+
+5、添加当前目录的所有文件到暂存区：git add .（注：“.”表示上传所以文件，并和“add”有一空格）;
+
+6、提交暂存区到仓库区：git commit –m “备注信息”
+
+7、上传仓库区的文件到远程仓库，远程仓库需要在git的官网上创建
+
+7、仓库区和远程仓库建立关联：git remote add origin git@github.com:用户名/仓库名.git或git remote add origin 仓库远程网址（注：必须创建关联才可把文件推送到仓库）
+
+8、推送到远程仓库：git push -u origin master（仓库为空或首次上传）
+
+                          git push origin master（之后上传）
+
+                          注：第一次上传可能会遇到push出错的情况，是因为你创建远程仓库的时候，勾选了创建README.md文件，我们先要把它同步一下，命令： git pull --rebase origin master
